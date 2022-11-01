@@ -14,4 +14,9 @@ class teacher extends Model
         'description',
         'image'
     ];
+
+    public function course()
+    {
+        return $this->hasMany(course::class, 'teacher_id','id');
+    }
 }

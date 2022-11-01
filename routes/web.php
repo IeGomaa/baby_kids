@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\Admin\AdminActivityController;
 use App\Http\Controllers\Admin\AdminController;
+use App\Http\Controllers\Admin\AdminCourseController;
 use App\Http\Controllers\Admin\AdminQuestionController;
 use App\Http\Controllers\Admin\AdminSliderController;
 use App\Http\Controllers\Admin\AdminTeacherController;
@@ -69,6 +70,17 @@ Route::group(['prefix' => 'admin', 'as' => 'admin.', 'middleware' => 'auth'], fu
         Route::post('/update', [AdminTeacherController::class, 'update'])->name('update');
         Route::put('/edit', [AdminTeacherController::class, 'edit'])->name('edit');
     });
+
+    // teacher Routes
+    Route::group(['prefix' => 'course', 'as' => 'course.'],function () {
+        Route::get('/', [AdminCourseController::class, 'index'])->name('index');
+        Route::get('/create', [AdminCourseController::class, 'create'])->name('create');
+        Route::post('/insert', [AdminCourseController::class, 'insert'])->name('insert');
+        Route::delete('/delete', [AdminCourseController::class, 'delete'])->name('delete');
+        Route::post('/update', [AdminCourseController::class, 'update'])->name('update');
+        Route::put('/edit', [AdminCourseController::class, 'edit'])->name('edit');
+    });
+
 
 });
 
