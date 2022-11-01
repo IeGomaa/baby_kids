@@ -4,9 +4,9 @@ namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
 use App\Http\Interfaces\Admin\AdminSliderInterface;
-use App\Http\Requests\CheckIdSliderRequest;
-use App\Http\Requests\CreateSliderRequest;
-use App\Http\Requests\UpdateSliderRequest;
+use App\Http\Requests\slider\CheckIdSliderRequest;
+use App\Http\Requests\slider\CreateSliderRequest;
+use App\Http\Requests\slider\UpdateSliderRequest;
 
 class AdminSliderController extends Controller
 {

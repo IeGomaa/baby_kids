@@ -7,8 +7,6 @@ use App\Http\Traits\ImageTraits;
 use App\Http\Traits\ModelTrait;
 use App\Models\Slider;
 use RealRashid\SweetAlert\Facades\Alert;
-use function redirect;
-use function view;
 
 class AdminSliderRepository implements AdminSliderInterface
 {

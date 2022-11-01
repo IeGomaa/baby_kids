@@ -1,11 +1,11 @@
 <?php
 
-namespace App\Http\Requests;
+namespace App\Http\Requests\slider;
 
 use App\Models\Slider;
 use Illuminate\Foundation\Http\FormRequest;
 
-class CheckIdSliderRequest extends FormRequest
+class CreateSliderRequest extends FormRequest
 {
     /**
      * Determine if the user is authorized to make this request.
@@ -24,6 +24,6 @@ class CheckIdSliderRequest extends FormRequest
      */
     public function rules()
     {
-        return Slider::deleteRule();
+        return Slider::createRule();
     }
 }
